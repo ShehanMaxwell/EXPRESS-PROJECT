@@ -7,7 +7,7 @@ const PORT = 3000;
 const friends = [
   {
     id: 0,
-    name: 'Shreak',
+    name: 'Lara croft',
   },
   {
     id: 1,
