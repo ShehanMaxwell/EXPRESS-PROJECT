@@ -23,6 +23,10 @@ app.use((req, res, next) => {
   console.log(`${req.method} ${req.url} ${delta}ms`);
 });
 
+app.post('/friends', (req, res) => {
+  
+});
+
 app.get('/friends', (req, res) => {
   res.json(friends);
 });
