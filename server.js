@@ -7,8 +7,6 @@ const app = express();
 
 const PORT = 3000;
 
-
-
 app.use((req, res, next) => {
   const start = Date.now();
 
@@ -19,9 +17,13 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.post('/friends', friendsController.postFriend);
-app.get('/friends', friendsController.getFriends);
-app.get('/friends/:friendId', friendsController.getFriend);
+const friendsRouter = express.Router();
+
+friendsRouter.post('/', friendsController.postFriend);
+friendsRouter.get('/', friendsController.getFriends);
+friendsRouter.get('/:friendId', friendsController.getFriend);
+
+app.use('/friends', friendsRouter);
 
 app.get('/messages', messagesController.getMessages);
 app.post('/messages', messagesController.postMessages);
