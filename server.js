@@ -17,11 +17,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-const friendsRouter = express.Router();
 
-friendsRouter.post('/', friendsController.postFriend);
-friendsRouter.get('/', friendsController.getFriends);
-friendsRouter.get('/:friendId', friendsController.getFriend);
 
 app.use('/friends', friendsRouter);
 
