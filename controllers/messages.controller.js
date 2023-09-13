@@ -1,5 +1,5 @@
 function getMessages(req, res) {
-  res.send('<ul><li>YO ADRIAN</li></ul>');
+  // res.send('<ul><li>YO ADRIAN</li></ul>');
 }
 
 function postMessages(req, res) {
