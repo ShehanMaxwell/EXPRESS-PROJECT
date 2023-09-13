@@ -15,7 +15,7 @@ app.use((req, res, next) => {
   console.log(`${req.method} ${req.baseUrl}${req.url} ${delta}ms`);
 });
 
-app.use(express.static('public'));
+app.use('/site', express.static('public'));
 app.use(express.json());
 
 app.use('/friends', friendsRouter);
